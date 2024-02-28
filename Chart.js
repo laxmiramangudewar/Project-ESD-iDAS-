@@ -19,6 +19,7 @@ function createCommonjsModule(fn, module) {
 function getCjsExportFromNamespace (n) {
 	return n && n['default'] || n;
 }
+console.log("check namespace")
 
 var colorName = {
 	"aliceblue": [240, 248, 255],
