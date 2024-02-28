@@ -1,0 +1,28 @@
+body {
+  background: linear-gradient(to right bottom, rgb(170, 211, 221), rgb(83, 192, 198));
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+border-radius: 16px;
+  height: 430px;
+  width: 600px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Add this style to align the eye icon properly */
+.input-group-append {
+  cursor: pointer;
+}
+
+.input-group-text {
+  cursor: pointer;
+}

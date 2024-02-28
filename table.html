@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="tablestyle.css">
+    <link rel="stylesheet" href="bootstrap.min1.css">
+    <link href="bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link href="node_modules\bootstrap-icons\font\bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<style>
+    .scrollable-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .scrollable-table th, .scrollable-table td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .fixed-header {
+      position: sticky;
+      top: 0;
+      background-color: #f2f2f2;
+    }
+
+    .scrollable-table-container {
+      max-height: 600px; /* Adjust the max-height as needed */
+      overflow-y: auto;
+    }
+    
+</style>
+
+<body style="background-color: rgb(201, 231, 231);">
+    <div class="back-btn">
+        <a href="#" onclick="goBack()">
+            <svg width="50" height="50" viewBox="0 0 24 24">
+                <path
+                    d="M20 11H7.414l3.293-3.293a1 1 0 0 0-1.414-1.414l-5 5a1 1 0 0 0 0 1.414l5 5a1 1 0 0 0 1.414-1.414L7.414 13H20a1 1 0 0 0 0-2z" />
+            </svg>
+        </a>
+    </div>
+    <div class="container" style="background-color: rgb(201, 231, 231);border-style: solid; border-width: 3px;border-top: 20px;border-right: 20px;border-left: 20px;border-color: black;border-radius:2px;">
+        <div>
+            <label for="selectDate">Select Date:</label>
+            <input type="date" id="selectDate">
+            <label for="startTime">Start Time:</label>
+            <input type="text" id="startTime" pattern="[0-2][0-9]:[0-5][0-9]" inputmode="numeric"> <!-- 24-hour format pattern -->
+            <label for="endTime">End Time:</label>
+            <input type="text" id="endTime" pattern="[0-2][0-9]:[0-5][0-9]" inputmode="numeric"> <!-- 24-hour format pattern -->
+            <button type="button" class="btn-primary" id="ReadAndDisplay">Read and Display Data</button>
+            <button type="button" class="btn-primary" id="pdf">Pdf <i class="bi bi-file-earmark-arrow-down"></i> </button>
+            <button type="button" class="btn-primary" id="excel">Excel <i class="bi bi-file-earmark-arrow-down"></i> </button>
+        </div>
+        <br>
+    </div>
+    
+    
+    <script>
+        // Function to enforce 24-hour format for time inputs
+        function enforce24HourFormat(input) {
+            input.addEventListener('input', function(event) {
+                // Check if the entered value matches the HH:mm format
+                if (!/^([01]\d|2[0-3]):?([0-5]\d)$/.test(input.value)) {
+                    input.setCustomValidity('Please enter a valid time in 24-hour format (HH:mm)');
+                } else {
+                    input.setCustomValidity('');
+                }
+            });
+        }
+    
+        // Apply enforcement to start time and end time inputs
+        enforce24HourFormat(document.getElementById('startTime'));
+        enforce24HourFormat(document.getElementById('endTime'));
+    </script>
+    
+    <div class="container mt-5">
+        <div class="scrollable-table-container">
+            <table class="scrollable-table">
+                <thead>
+                    <tr class="fixed-header">
+                        <th >Date:</th>
+                        <th>Time:</th>
+                        <th>C1</th>
+                        <th>C2</th>
+                        <th>C3</th>
+                        <th>C4</th>
+                        <th>C5</th>
+                        <th>C6</th>
+                        <th>C7</th>
+                        <th>C8</th>
+                    </tr>
+                </thead>
+                <tbody id="dataBody" style="font-size: 20px;">
+                    <!-- Your table data goes here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="table.js"></script>
+    <script src="popper.min.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>

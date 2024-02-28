@@ -1,0 +1,86 @@
+.scrollable-table-container {
+    overflow-x: auto;
+}
+
+.scrollable-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.scrollable-table th,
+.scrollable-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.scrollable-table thead th {
+    background-color: #f2f2f2;
+}
+
+.scrollable-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.scrollable-table tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+  }
+  
+  .back-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+  }
+  #datafor{
+    width: auto;
+
+  }
+  .back-btn svg {
+    fill: white;
+  }
+  .container{
+    margin-top: 10px;
+    font-size: large;
+    padding-top: 10px;
+    text-align: center;
+  }
+  
+  /* Style the data table */
+
+.fixed-header{
+    position:sticky;
+    border-top: #000000;
+    top: 0;
+    background-color: #18a7a0;
+  }
+
+.scrollable-table-container {
+  height: 600px;
+  overflow-y: auto;
+  background-color: white;
+}
+
+.scrollable-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.scrollable-table th,
+.scrollable-table td {
+  border: 1px solid #0f0f0f;
+  padding: 8px;
+  text-align: left;
+}

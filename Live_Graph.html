@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="node_modules\bootstrap-icons\font\bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.min1.css">
+    <script src="Chart.js"></script>
+    <script src="moment.min.js"></script>
+    <script src="chartjs-plugin-zoom.js"></script>
+    <script src="chartjs-plugin-annotation.min.js"></script>
+    <link rel="stylesheet" href="channel.css">
+    
+</head>
+<body style="background-color: rgb(195, 201, 230);">
+    <div class="back-btn">
+        <a href="#" onclick="goBack()">
+            <svg width="50" height="50" viewBox="0 0 24 24">
+                <path
+                    d="M20 11H7.414l3.293-3.293a1 1 0 0 0-1.414-1.414l-5 5a1 1 0 0 0 0 1.414l5 5a1 1 0 0 0 1.414-1.414L7.414 13H20a1 1 0 0 0 0-2z" />
+            </svg>
+        </a>
+    </div>
+    <div class="container mt-5 " style="background-color:rgb(226, 238, 234) ;">
+        <div class="linechart">
+            <canvas id="lineChart" width="800" height="500" style="zoom: initial;"></canvas>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+    </script>
+    <script src="Live-Graph.js"></script>
+    <script src="popper.min.js"></script>
+</body>
+
+</html>

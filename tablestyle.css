@@ -1,0 +1,27 @@
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.back-btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+.back-btn svg {
+  fill: white;
+}
+.container{
+  margin-top: 20px;
+  font-size: large;
+  padding-top: 50px;
+  text-align: center;
+}

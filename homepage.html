@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ESD-iDAS</title>
+    <link href="bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="node_modules\bootstrap-icons\font\bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.min1.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <aside id="sidebar" style="background-color: #a9e8ec;">
+            <div class="h-100">
+                <div class="sidebar-logo row">
+                    <a class="navbar-brand col-1" style="padding-top: 13px;">
+                        <img src="logo.png" alt="Electronics Systems And Devices" width="40" height="40">
+                    </a>
+                    <a class="navbar-brand col-9">
+                        <img src="name.png" alt="Electronics Systems And Devices" width="172" height="60">
+                    </a>
+                </div>
+                <ul class="sidebar-nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-target="#liveData" onclick="readAndDisplayLiveData()">
+                            <i class="bi bi-activity" style="font-size: 16pt;"></i>
+                            <span class="icon-text"style="color:black;font-size:18pt;font-weight:bold; font-family:'Garamond'">Live</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-target="#historyLink" data-bs-toggle="modal">
+                            <i class="bi bi-clock-history" style="font-size: 16pt;"></i>
+                            <span class="icon-text" style="color:black;font-size:18pt;font-weight:bold;
+                            font-family:'Garamond'">History</span>
+                        </a>
+                    </li>
+                    <li class="dropdown" style="padding: 15px; display: flex;">
+                        <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-journals" style="font-size: 16pt;"></i><span class="ms-1 d-none d-sm-inline" style="color: black; font-size: 18pt; font-weight: bold; font-family: 'Garamond'">Graph</span>
+                        </a>
+                        <ul id="dynamicGraphDropdown" class="dropdown-menu text-small shadow" aria-labelledby="dropdown" style="background-color: #a9e8ec;">
+                            <!-- Dynamic dropdown options will be inserted here -->
+                        </ul>
+                    </li>
+                    <li class="dropdown" style="padding: 15px; display: flex;">
+                        <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-journals" style="font-size: 16pt;"></i><span class="ms-1 d-none d-sm-inline" style="color: black; font-size: 18pt; font-weight: bold; font-family: 'Garamond'">Table</span>
+                        </a>
+                        <ul id="dynamicTableDropdown" class="dropdown-menu text-small shadow" aria-labelledby="dropdown" style="background-color: #a9e8ec;">
+                            <!-- Dynamic dropdown options will be inserted here -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
+                            onclick="listAvailablePorts()">
+                            <i class="bi bi-usb-symbol" style="font-size: 16pt;"></i>
+                            <span class="icon-text"style="color:black;font-size:18pt;font-weight:bold; font-family:'Garamond'">Port Setting</span>
+                        </a>
+                    </li>
+                    <li class="dropdown" style="padding: 15px; display: flex;">
+                        <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-gear" style="font-size: 16pt;"></i><span class="ms-1 d-none d-sm-inline" style="color: black; font-size: 18pt; font-weight: bold; font-family: 'Garamond'">Setting</span>
+                        </a>
+                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown" style="background-color: #a9e8ec;">
+                            <li><a class="dropdown-item" href="#" data-bs-target="#setting" data-bs-toggle="modal" style="font-weight: bold;">No of Devices</a></li>
+                            <li><a class="dropdown-item" href="#"data-bs-target="#deviceDescriptionModal" data-bs-toggle="modal" style="font-weight: bold;">Device Description</a></li>
+                        </ul>
+                    </li>
+                    <!-- History -->
+                    <div class="modal fade" id="historyLink" aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="historyModalToggleLabel">History</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="box1">
+                                    <div>
+                                        <label for="selectDate">Select Date:</label>
+                                        <input type="date" id="selectDate">
+                                        <button onclick="" data-bs-dismiss="modal" type="button" class="btn btn-primary">Read and Display Data</button>
+                                    </div>
+                                    <div id="tableContainer"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Settings -->
+                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">SERIAL PORT CONFIGURATION</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <!-- Port Settings-->
+                                <div class="box1">
+                                    <label for="comPortSelect">COM Port:</label>
+                                    <select id="comPortSelect"></select>
+                                    <br><br>
+                                    <button type="button" class="btn btn-success" id="connectButton">Connect</button>
+                                    <button type="button" class="btn btn-danger"  id="disconnectButton">Disconnect</button>
+                                    <button type="button" class="btn btn-primary"  id="refreshButton">Refresh</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- device Description -->
+
+                    <div class="modal fade" id="deviceDescriptionModal" aria-hidden="true"
+                        aria-labelledby="deviceDescriptionLabel" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="deviceDescriptionLabel">Device Description</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <div class="row" id="channelDescriptionRows">
+                                            <!-- Channel description rows will be dynamically generated here -->
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" id="Apply">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Setting -->    
+                    <div class="modal fade" id="setting" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Settings</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mb-3">
+                                        <label for="orgInput" class="form-label">Number Of Devices:</label>
+                                        <input type="text" class="form-control" id="numberOfDevices">
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary" id="SaveNumberOfDevices">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </ul>
+            </div>
+        </aside>
+
+
+        <!-- Main Component -->
+        <div class="main" id="dynamicContentPlaceholder">
+            <nav class="navbar navbar-expand px-3 border-bottom" id="navbar">
+                <!-- Button for sidebar toggle with arrow symbol -->
+                <button class="btn arrow-button" type="button" onclick="toggleSidebar()" data-bs-theme="dark">
+                    <span id="arrowSymbol">&#11164;</span>
+                </button>
+                <div style="margin-left: 35%;">
+                    <div id="ShowingDate" style="font-weight:bold; font-size: 30pt;font-family:'Garamond';color:black; text-align: center; padding-left: 75px;">Home</div>
+                </div> 
+            </nav>
+            <br>
+            <main class="content px-3 py-2">
+                <div class="container-fluid">
+                    <div class="row row-cols-1 row-cols-md-4 g-4" id="channelCardsContainer"></div>
+                </div>
+            </main>
+        </div>
+        
+        <!-- Your main page script -->
+        <script src="homepage.js"></script>
+        <script src="bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"crossorigin="anonymous"></script>
+</body>
+</html>
