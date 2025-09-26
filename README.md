@@ -8,7 +8,7 @@
 <p align="center">
   <b>Industrial-Grade SCADA Application for Real-Time Data Acquisition</b>  
   <br />
-  <i>Built with Modbus • Electron.js • Node.js • Chart.js</i>
+  <i>Built for Modbus </i>
   <br /><br />
 
   <!-- Badges -->
