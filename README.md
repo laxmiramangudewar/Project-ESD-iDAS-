@@ -11,19 +11,18 @@
   <i>Built for Modbus </i>
   <br /><br />
 
-  <!-- Badges -->
-  <a href="https://github.com/<your-username>/iDAS/stargazers">
-    <img src="https://img.shields.io/github/stars/<your-username>/iDAS?style=flat-square&color=yellow" alt="GitHub stars"/>
-  </a>
-  <a href="https://github.com/<your-username>/iDAS/issues">
-    <img src="https://img.shields.io/github/issues/<your-username>/iDAS?style=flat-square&color=red" alt="GitHub issues"/>
-  </a>
-  <a href="https://github.com/<your-username>/iDAS/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/<your-username>/iDAS?style=flat-square&color=blue" alt="License"/>
-  </a>
-  <img src="https://img.shields.io/badge/Modbus-SCADA-brightgreen?style=flat-square" alt="Modbus Badge"/>
-  <img src="https://img.shields.io/badge/Electron.js-Cross%20Platform-lightblue?style=flat-square" alt="Electron Badge"/>
-</p>
+## 👥 Authors & Developers
+
+- **Laxmiraman Dnyaneshwar Gudewar** – Lead Developer & Research  
+  [GitHub](https://github.com/laxmiramangudewar) · [LinkedIn](https://www.linkedin.com/in/laxmiramangudewar) · ✉️ laxmiramangudewar@gmail.com
+
+- **Aniket Shelar** – Developer ·  Communication & Testing
+
+- **Manish Sahu** – Developer ·  Data Acquisition & UI Components
+
+**Academic Guide:** Dr. Prabhakar N. Kota  
+**Department:** Electronics & Telecommunication, MES Wadia College of Engineering, Pune  
+**Industry Sponsor:** Electronics Systems & Devices (ESD), Pune
 
 ---
 
