@@ -13,9 +13,9 @@
 ## 📖 Research Contribution
 This project is documented in the paper:  
 
-📥 [**Download Research Paper (PDF)**](./Research%20Paper%20Group%2015.pdf)
+📥 [**Download Paper (PDF)**](./Research%20Paper%20Group%2015.pdf)
 
-The paper, *“Modbus Communication Library & UI Component Framework for SCADA System”*, presents the methodology, design, and outcomes of iDAS [oai_citation:0‡Research Paper Group 15.pdf](sediment://file_00000000cff061f7a290cb4d5f3dc392).
+The paper, *“Modbus Communication Library & UI Component Framework for SCADA System”*, presents the methodology, design, and outcomes of iDAS [oai_citation:0‡iDAS_paper.pdf](sediment://file_00000000cff061f7a290cb4d5f3dc392).
 
 ## Authors & Developers
 
