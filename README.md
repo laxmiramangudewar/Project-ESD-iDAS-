@@ -8,16 +8,19 @@
 <p align="center">
   <b>Industrial-Grade SCADA Application for Real-Time Data Acquisition</b>  
   <br />
-  <i>Built for Modbus </i>
+  <i>Built for Modbus COM </i>
   <br /><br />
+## 📖 Research Contribution
+This project is documented in the paper:  
 
-## 👥 Authors & Developers
+📥 [**Download Research Paper (PDF)**](./Research%20Paper%20Group%2015.pdf)
+
+The paper, *“Modbus Communication Library & UI Component Framework for SCADA System”*, presents the methodology, design, and outcomes of iDAS [oai_citation:0‡Research Paper Group 15.pdf](sediment://file_00000000cff061f7a290cb4d5f3dc392).
+
+## Authors & Developers
 
 - **Laxmiraman Dnyaneshwar Gudewar** – Lead Developer & Research  
-  [GitHub](https://github.com/laxmiramangudewar) · [LinkedIn](https://www.linkedin.com/in/laxmiramangudewar) · ✉️ laxmiramangudewar@gmail.com
-
 - **Aniket Shelar** – Developer ·  Communication & Testing
-
 - **Manish Sahu** – Developer ·  Data Acquisition & UI Components
 
 **Academic Guide:** Dr. Prabhakar N. Kota  
@@ -44,7 +47,7 @@
 iDAS (Intelligent Data Acquisition System) is a **desktop SCADA application** for **real-time communication with Data Loggers and Data Scanners** using the **Modbus protocol**.  
 It simplifies **data access, monitoring, and visualization** while ensuring **offline reliability** for industrial environments.
 
-Developed as part of the **B.E. in Electronics & Telecommunication Engineering (2023–24)** at **MES Wadia College of Engineering, Pune** and **sponsored by Electronics Systems & Devices (ESD), Pune** [oai_citation:0‡Report v1[1].docx](sediment://file_000000000dc861f7995e4dce16cd43f2) [oai_citation:1‡Research Paper Group 15.pdf](sediment://file_00000000d02c61f7911dbe8231e3e645).
+Developed as part of the **B.E. in Electronics & Telecommunication Engineering (2023–24)** at **MES Wadia College of Engineering, Pune** and **sponsored by Electronics Systems & Devices (ESD), Pune**.
 
 ---
 
