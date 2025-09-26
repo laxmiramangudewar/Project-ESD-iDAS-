@@ -17,6 +17,8 @@ This project is documented in the paper:
 
 The paper, *“Modbus Communication Library & UI Component Framework for SCADA System”*, presents the methodology, design, and outcomes of iDAS [oai_citation:0‡iDAS_paper.pdf](sediment://file_00000000cff061f7a290cb4d5f3dc392).
 
+[![Paper](https://img.shields.io/badge/Paper-PDF-red)](./iDAS_Research_Paper.pdf)  
+*Authors: Laxmiraman Gudewar, Soham Tolwala — Saarland University*
 ## Authors & Developers
 
 - **Laxmiraman Dnyaneshwar Gudewar** – Lead Developer & Research  
