@@ -1,6 +1,7 @@
 <!-- PROJECT LOGO -->
 <p align="center">
-  <img src="assets/iDAS-banner.png" alt="iDAS Banner" width="80%" />
+  <img src="<img width="94" height="97" alt="logo" src="https://github.com/user-attachments/assets/f31348e2-77a7-4d38-bd70-b8ccdef22314" />
+" alt="iDAS Banner" width="80%" />
 </p>
 
 <h1 align="center">iDAS – Intelligent Data Acquisition System</h1>
