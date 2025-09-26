@@ -37,18 +37,18 @@ Developed as part of the **B.E. in Electronics & Telecommunication Engineering (
 
 ---
 
-## 🚀 Features
-- 🔌 Seamless Modbus RTU/TCP Communication  
-- 📈 Real-time channel updates with trend analysis  
-- 🖥️ Intuitive Electron-based cross-platform desktop app  
-- 🔒 Secure login for authorized access  
-- ⚡ Automated workflows triggered by conditions  
-- 📑 Export data to PDF & Excel for reporting  
-- 🧑‍🏭 Industrial + Educational use cases  
+##  Features
+-  Seamless Modbus RTU/TCP Communication  
+-  Real-time channel updates with trend analysis  
+-  Intuitive Electron-based cross-platform desktop app  
+-  Secure login for authorized access  
+-  Automated workflows triggered by conditions  
+-  Export data to PDF & Excel for reporting  
+-  Industrial + Educational use cases  
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 **Languages & Frameworks**  
 - `JavaScript`, `Node.js`, `Electron.js`, `Bootstrap`, `Chart.js`  
 
@@ -59,6 +59,15 @@ Developed as part of the **B.E. in Electronics & Telecommunication Engineering (
 - Industrial **Data Logger / Scanner**  
 - **RS-485 Serial Interface** or USB-to-Serial Adapter  
 
+---
+
+##  Achievements
+-  **Sponsored by Electronics Systems & Devices (ESD), Pune)** — ensured industrial relevance and deployment.  
+-  **Deployed in university laboratories** as a training and educational tool for SCADA & Modbus systems.  
+-  **Recognized by industry experts** for its usability, scalability, and modular design.  
+-  **Bridged academia and industry** by creating a practical, real-world SCADA application.  
+-  Identified **future research directions** including IoT connectivity, ML-based anomaly detection, and cross-platform accessibility.
+  
 ---
 
 ## ⚙️ Installation & Setup
